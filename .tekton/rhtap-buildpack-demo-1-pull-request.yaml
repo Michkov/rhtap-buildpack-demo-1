@@ -353,6 +353,7 @@ spec:
               imagePullPolicy: Always
               args:
                 - copy
+                - --authfile=/tekton/home/.docker/config.json
                 - docker://quay.io/skopeo/stable:latest
                 - docker://quay.io/redhat-user-workloads/mkovarik-tenant/rhtap-buildpack-demo-1/rhtap-buildpack-demo-1:abc
               volumeMounts:

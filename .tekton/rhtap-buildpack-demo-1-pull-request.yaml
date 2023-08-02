@@ -358,7 +358,7 @@ spec:
                 - "-cache-image=$(params.CACHE_IMAGE)"
                 - "-uid=$(params.USER_ID)"
                 - "-gid=$(params.GROUP_ID)"
-                - "-log-level=debug"
+                - "-log-level=trace"
                 - "$(params.APP_IMAGE)"
               volumeMounts:
                 - name: layers-dir

@@ -372,7 +372,7 @@ spec:
                 - "-run-image=$(params.RUN_IMAGE)"
                 - "-uid=$(params.USER_ID)"
                 - "-gid=$(params.GROUP_ID)"
-                - "quay.io/redhat-user-workloads/mkovarik-tenant/rhtap-buildpack-demo-1/rhtap-buildpack-demo-1:abc"
+                - "quay.io/redhat-user-workloads/mkovarik-tenant/rhtap-buildpack-demo-1/rhtap-buildpack-demo-1"
               volumeMounts:
                 - name: layers-dir
                   mountPath: /layers

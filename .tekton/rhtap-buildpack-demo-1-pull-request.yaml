@@ -358,8 +358,7 @@ spec:
                 - "-cache-image=$(params.CACHE_IMAGE)"
                 - "-uid=$(params.USER_ID)"
                 - "-gid=$(params.GROUP_ID)"
-                - "-log-level=trace"
-                - "$(params.APP_IMAGE)"
+                - "quay.io/redhat-user-workloads/mkovarik-tenant/rhtap-buildpack-demo-1/rhtap-buildpack-demo-1"
               volumeMounts:
                 - name: layers-dir
                   mountPath: /layers

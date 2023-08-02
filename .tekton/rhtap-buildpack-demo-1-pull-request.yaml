@@ -348,6 +348,17 @@ spec:
                 - name: $(params.PLATFORM_DIR)
                   mountPath: /platform
 
+            - name: write-test
+              image: quay.io/skopeo/stable
+              imagePullPolicy: Always
+              args:
+                - copy
+                - docker://quay.io/skopeo/stable:latest
+                - docker://quay.io/redhat-user-workloads/mkovarik-tenant/rhtap-buildpack-demo-1/rhtap-buildpack-demo-1:abc
+              volumeMounts:
+                - name: layers-dir
+                  mountPath: /layers
+
             - name: analyze
               image: $(params.CNB_LIFECYCLE_IMAGE)
               imagePullPolicy: Always

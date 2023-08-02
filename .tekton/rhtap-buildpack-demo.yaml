@@ -244,7 +244,7 @@ spec:
             - name: url
               value: https://github.com/redhat-buildpacks/testing.git
             - name: revision
-              value: main
+              value: debug
             - name: pathInRepo
               value: k8s/tekton/buildpacks-phases.yml
         when:

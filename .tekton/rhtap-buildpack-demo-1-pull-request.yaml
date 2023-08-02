@@ -347,7 +347,12 @@ spec:
                   mountPath: /layers
                 - name: $(params.PLATFORM_DIR)
                   mountPath: /platform
-       
+
+            - name: debug
+              image: registry.access.redhat.com/ubi9/ubi:latest
+              imagePullPolicy: Always
+              command: ["sleep", "100000"]
+
             - name: analyze
               image: $(params.CNB_LIFECYCLE_IMAGE)
               imagePullPolicy: Always
